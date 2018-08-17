@@ -1,0 +1,15 @@
+{% assign image_files = site.static_files | where_exp:"file", "file.path contains include.path" %}
+{% assign row_count = image_files.size | where_exp:"file", "file.path contains include.path" | divided_by: 4.0 | floor %}
+
+<div class="columns gallery is-gapless">
+  {% for i in (1..4) %}
+  <div class="column">
+    {% assign offset = forloop.index0 | times: row_count %}
+    {% for file in image_files limit:row_count offset:offset %}
+    <figure class="image is-square">
+      <img class="grey" src="{{ file.path }}" style="object-fit: cover;">
+    </figure>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>

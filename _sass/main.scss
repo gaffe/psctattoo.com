@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+@import "http://overpass-30e2.kxcdn.com/overpass.css";
+
+$family-sans-serif: "overpass", sans-serif;
+$footer-background-color: hsl(252, 8%, 12%);
+$navbar-background-color: black;
+$navbar-item-color: white;
+$navbar-burger-color: white;
+$navbar-height: 8rem;
+$navbar-item-img-max-height: 3rem;
+$instagram-color: #e4405f;
+
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/base/_all";
+@import "bulma/sass/elements/_all";
+@import "bulma/sass/components/_all";
+@import "bulma/sass/grid/_all";
+@import "bulma/sass/layout/_all";
+
+html {
+}
+
+.title {
+  font-weight: 800;
+}
+
+main {
+
+}
+
+.navbar-item {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: color .5s ease-in-out;
+
+  &.active {
+    color: $link;
+    cursor: default;
+    border-bottom: 2px solid $link;
+  }
+
+  svg {
+    max-height: 4rem;
+
+    * {
+      transition: 200ms;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:hover * {
+      fill: $link;
+    }
+  }
+}
+
+.navbar-burger {
+  span {
+    height: 2px;
+    width: 24px;
+    left: calc(50% + 6px);
+
+    &:nth-child(2) {
+      top: calc(50%)
+    }
+
+    &:nth-child(3) {
+      top: calc(50% + 6px)
+    }
+  }
+}
+
+.hero {
+  &.is-main {
+    background-image: linear-gradient(rgba(0,0,0,1) 15%, rgba(0,0,0,.5)), url("/assets/images/home/banner02.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    @include mobile {
+      background-size: auto 100%;
+      background-attachment: scroll;
+    }
+
+    .hero-body {
+      .title {
+        font-size: 5vw;
+        color: $white-ter;
+        text-transform: uppercase;
+
+        @include mobile {
+          font-size: 10vw;
+        }
+      }
+
+      .subtitle {
+        font-size: 3vw;
+        color: $white-ter;
+        text-transform: uppercase;
+
+        @include mobile {
+          font-size: 6vw;
+        }
+      }
+    }
+  }
+
+  &.is-page {
+    margin-top: $navbar-height;
+  }
+}
+
+.instagram-color {
+  color: $instagram-color;
+}
+
+.grey {
+  filter: grayscale(100%);
+  transition: filter 500ms ease-in-out;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @include mobile {
+      height: 100%;
+    }
+  }
+}
+
+footer {
+  background-color: $grey-darker;
+}

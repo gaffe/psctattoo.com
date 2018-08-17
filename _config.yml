@@ -1,0 +1,23 @@
+title: Point St-Charles Tattoo
+description: The oldest tattoo shop in Montreal, since 1976.
+email: info@psctattoo.com
+
+google_analytics: UA-00000000-0
+
+collections:
+  pages:
+    output: true
+    permalink: /:title
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "assets/images/will"
+    values:
+      author: "will"
+  - scope:
+      path: "assets/images/dave"
+    values:
+      author: "dave"
