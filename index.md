@@ -6,8 +6,8 @@ class: home
 <section class="hero is-main is-fullheight">
   <div class="hero-body">
     <div class="container has-text-centered sign">
-      <h1 class="title">Point St-Charles Tattoo</h1>
-      <h2 class="subtitle">Montreal&rsquo;s oldest <br>tattoo shop<br> established in 1976.</h2>
+      <h1 class="title">Pointe St-Charles Tattoo</h1>
+      <h2 class="subtitle">Established<br>in<br> Montreal in 1976.</h2>
     </div>
   </div>
   <div class="hero-foot">

@@ -42,7 +42,7 @@ order: 5
           <h2>Hours of Operation</h2>
           <p>
             Open: <strong>Tuesday to Saturday</strong><br>
-            Hours: <strong>11am to 5pm</strong> (Hours may vary so call beforehand)
+            Hours: <strong>10:30am to 5:30pm</strong>
           </p>
         </div>
       </div>
