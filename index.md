@@ -7,7 +7,7 @@ class: home
   <div class="hero-body">
     <div class="container has-text-centered sign">
       <h1 class="title">Pointe St-Charles Tattoo</h1>
-      <h2 class="subtitle">Established<br>in<br> Montreal in 1976.</h2>
+      <h2 class="subtitle">Montreal<br> Established in 1976.</h2>
     </div>
   </div>
   <div class="hero-foot">

@@ -20,13 +20,6 @@ order: 5
         <div class="content">
           <h2>General Information</h2>
           <p>If you’d like to get in touch with us for a consultation, you can do so in person at the shop or by phone. We recommend having an appointment but walk-ins are certainly welcome.</p>
-          <p>Before getting in touch, here are a couple of things to note so you don’t waste your time:</p>
-          <ul>
-            <li>We don’t offer any piercing services</li>
-            <li>We don’t tattoo minors under any circumstances</li>
-            <li>We accept cash only</li>
-            <li>Deposits are non-refundable</li>
-          </ul>
         </div>
       </div>
       <div class="column">
