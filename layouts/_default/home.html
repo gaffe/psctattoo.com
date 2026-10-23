@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="hero">
+    <h1>{{ with .Params.hero_before }}{{ . }}{{ end }}<span>{{ .Params.hero_span }}</span>{{ with .Params.hero_after }}{{ . }}{{ end }}</h1>
+    <h2>{{ .Params.hero_location }}<br>{{ .Params.hero_established }}</h2>
+</section>
+<section class="about">
+    <div class="columns">
+        <div class="centered">
+            <img src="/banner03.jpg" />
+        </div>
+        <div>
+            <h2>{{ .Title }}</h2>
+            {{ .Content }}
+        </div>
+  </div>
+</section>
+{{ end }}

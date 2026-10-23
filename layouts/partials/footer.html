@@ -1,0 +1,28 @@
+{{- $contact := index hugo.Data.contact site.Language.Locale -}}
+<footer>
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ $contact.facebook }}" class="icon is-large">
+                    <i class="fab fa-lg fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ $contact.instagram }}" class="icon is-large">
+                    <i class="fab fa-lg fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{ $contact.email }}" class="icon is-large">
+                    <i class="far fa-lg fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="tel:{{ $contact.phone_href }}" class="icon is-large">
+                    <i class="fas fa-lg fa-phone"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <p>© 1976&ndash;{{ now.Year }} {{ site.Title }}. {{ T "rights_reserved" }}.</p>
+</footer>

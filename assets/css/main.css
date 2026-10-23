@@ -1,0 +1,285 @@
+@import "https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap";
+
+:root {
+    --clr-body: hsl(23, 62%, 4%);
+    --clr-text: hsl(21, 62%, 91%);
+    --clr-primary: hsl(320, 48%, 66%);
+    --clr-secondary: hsl(176, 91%, 31%);
+    --clr-accent: hsl(119, 100%, 50%);
+
+
+    --ff-base: "Courier New", Courier, monospace;
+    --ff-heading: "Overpass", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 900;
+
+    --fs-100: clamp(0.4498rem, 0.8965rem + -0.5764vw, 0.7813rem);
+    --fs-200: clamp(0.7499rem, 1.0028rem + -0.3263vw, 0.9375rem);
+    --fs-300: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --fs-400: clamp(1.35rem, 1.0948rem + 1.2761vw, 2.0838rem);
+    --fs-500: clamp(1.62rem, 0.9753rem + 3.2237vw, 3.4736rem);
+    --fs-600: clamp(1.944rem, 0.6061rem + 6.6896vw, 5.7905rem);
+    --fs-700: clamp(2.3328rem, -0.2133rem + 12.7304vw, 9.6528rem);
+    --fs-800: clamp(2.7994rem, -1.8239rem + 23.1162vw, 16.0912rem);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p,
+li {
+    text-wrap: pretty;
+    max-width: 65ch;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-base);
+    font-size: var(--fs-400);
+    line-height: 1.6;
+    background-color: var(--clr-body);
+    color: var(--clr-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-bold);
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--fs-700);
+}
+
+main > h1 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+main > h2 {
+    text-align: center;
+    font-size: var(--fs-600);
+    margin-top: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 2rem;
+    margin-top: 1rem;
+}
+
+header .logo {
+    color: var(--clr-text);
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-icon span {
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transition: 0.3s;
+}
+  
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+  
+.menu-icon span:nth-child(2) {
+    top: 12px;
+}
+  
+.menu-icon span:nth-child(3) {
+    top: 24px;
+}
+
+@media (max-width: 1075px) {
+    /* Show the menu icon on screens less than 1000px */
+    .menu-icon {
+      display: block;
+    }
+  
+    header nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--clr-body);
+      z-index: 1;
+    }
+  
+    header nav a {
+        font-size: var(--fs-600);
+      padding: 1rem 0;
+    }
+  
+    /* Show the menu when the checkbox is checked */
+    .menu-toggle:checked + .menu-icon + nav ul {
+      display: flex;
+    }
+  
+    /* Transform the icon into an "X" when menu is open */
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 12px;
+    }
+  
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 12px;
+    }
+}
+
+.wrapper {
+    width: min(100% - 3rem, 65ch);
+    margin-inline: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+a {
+    color: var(--clr-primary);
+}
+
+a:hover,
+a:focus {
+    color: var(--clr-accent);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1em);
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:
+        repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.tattoo {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.hero {
+    background-image: linear-gradient(hsl(23, 62%, 4%) 15%, rgba(0,0,0,.5)), url('/banner02.jpg');
+    background-size: cover;
+    height: 100svh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6rem;
+}
+
+.hero h1, .hero h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: var(--fs-800);
+
+    span {
+        display: block;
+        font-size: var(--fs-800);
+    }
+}
+
+.about {
+    width: min(100% - 3rem);
+    margin-inline: auto;
+}
+
+.columns {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:
+        repeat(auto-fit, minmax(25ch, 1fr));
+    margin-top: 4rem;
+}
+
+.columns .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding-block: 4rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}

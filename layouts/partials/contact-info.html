@@ -1,0 +1,8 @@
+{{- $contact := index hugo.Data.contact site.Language.Locale -}}
+<address>
+    {{- range $contact.address }}
+    {{ . }}<br>
+    {{- end }}
+    {{ T "email" }}: <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a><br>
+    {{ T "telephone" }}: <a href="tel:{{ $contact.phone_href }}">{{ $contact.phone_display }}</a>
+</address>

@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    <h2><a href="https://www.instagram.com/{{ .Params.instagram }}">@{{ .Params.instagram }}</a></h2>
+        <div class="grid">
+        {{- $slug := .Slug -}}
+        {{- $tattoos := (index hugo.Data $slug "images").images -}}
+        
+        {{ range $tattoos }}
+            <img class="tattoo" src="{{ .src }}" alt="" />
+        {{ end }}
+        
+        </div>
+  {{ .Content }}
+{{ end }}

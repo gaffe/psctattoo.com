@@ -1,0 +1,15 @@
+[en]
+email = 'info@psctattoo.com'
+phone_display = '+1 514 931 2325'
+phone_href = '+15149312325'
+address = ['5726 Monk Boulevard', 'Montreal, Quebec', 'H4E 3H1']
+facebook = 'https://fb.me/psctattoo'
+instagram = 'https://www.instagram.com/psctattoo'
+
+[fr]
+email = 'info@psctattoo.com'
+phone_display = '+1 514 931 2325'
+phone_href = '+15149312325'
+address = ['5726 boulevard Monk', 'Montréal, Québec', 'H4E 3H1']
+facebook = 'https://fb.me/psctattoo'
+instagram = 'https://www.instagram.com/psctattoo'

@@ -1,0 +1,31 @@
+baseURL = 'https://www.psctattoo.com/'
+
+defaultContentLanguage = 'en'
+
+[languages]
+    [languages.en]
+        contentDir = 'content/en'
+        disabled = false
+        locale = 'en'
+        direction = 'ltr'
+        label = 'English'
+        title = 'PSC Tattoo'
+        weight = 1
+    [languages.fr]
+        contentDir = 'content/fr'
+        disabled = false
+        locale = 'fr'
+        direction = 'ltr'
+        label = 'Français'
+        title = 'Tatouage PSC'
+        weight = 2
+
+[module]
+    [module.hugoVersion]
+        extended = false
+        min = "0.116.0"
+
+[deployment]
+    [[deployment.targets]]
+        name = "production"
+        URL = "s3://www.psctattoo.com"
